@@ -10,6 +10,8 @@ print(alumnos)
 listaAlumnos = alumnos.splitlines()
 print(listaAlumnos)
 
+listaResultado = []
+
 for dictAlumno in listaAlumnos:
   listaDiccionarioAlumnos = dictAlumno.split(',')
   print(listaDiccionarioAlumnos)
@@ -18,4 +20,7 @@ for dictAlumno in listaAlumnos:
     'email' : listaDiccionarioAlumnos[1],
     'celular' : listaDiccionarioAlumnos[2]
   }
-  
+  listaResultado.append(dictAlumno)
+
+print(listaResultado)
+f.close 

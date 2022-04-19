@@ -68,3 +68,17 @@ def cargarAlumnos(strAlumnos):
         }
         alumnos.append(dictAlumno)
     return alumnos 
+
+def grabarAlumnos(alumnos):
+    """
+    convierte una lista de diccionarios en una cada string
+    """
+    strAlumnos = ""
+    for l in alumnos:
+        for clave,valor in l.items():
+            strAlumnos += valor
+            if clave != 'celular':
+                strAlumnos += ','
+            else:
+                strAlumnos += '\n'
+    return strAlumnos
